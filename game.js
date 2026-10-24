@@ -247,6 +247,7 @@ function sendPrompt(event) {
   nextPrompt = pickPrompt();
   floatText("−" + tokens(value), event);
   renderChat();
+  renderAll(); // clicks must refresh meters immediately, not only on the next tick
 }
 function pickPrompt() {
   const count = t("prompts").length;
